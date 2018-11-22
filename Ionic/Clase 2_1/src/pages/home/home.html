@@ -1,0 +1,132 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- SEGMENT-->
+  <div padding>
+      <ion-segment [(ngModel)]="segmentos">
+        <ion-segment-button value="periodo1">
+          PERIODO 1
+        </ion-segment-button>
+        <ion-segment-button value="periodo2">
+          PERIODO 2
+        </ion-segment-button>
+        <ion-segment-button value="periodo3">
+          PERIODO 3
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+    
+    <div [ngSwitch]="segmentos">
+      <ion-list *ngSwitchCase="'periodo1'">
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="./assets/imgs/1.jpg">
+          </ion-thumbnail>
+          <h2>Ruby</h2>
+        </ion-item>
+        ...
+      </ion-list>
+    
+      <ion-list *ngSwitchCase="'periodo2'">
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="./assets/imgs/2.jpg">
+          </ion-thumbnail>
+          <h2>Luna</h2>
+        </ion-item>
+        ...
+      </ion-list>
+
+      <ion-list *ngSwitchCase="'periodo3'">
+          <ion-item>
+              <ion-item>
+                  <ion-avatar item-start>
+                    <img src="./assets/imgs/logo.svg">
+                  </ion-avatar>
+                  <h2>JavaScript</h2>
+                  <p>Aprende a programar JavaScript!</p>
+                  <ion-note item-end>23/11/2018</ion-note>
+              </ion-item>
+              <button ion-item>Bootstrap</button>
+              <button ion-item>Logica de Programación</button>
+              <button ion-item>JavaScript 3</button>
+          </ion-item>
+          ...
+        </ion-list>
+    </div>
+  <!-- SLIDES -->
+  <ion-slides>
+    <ion-slide style="background-color: green">
+        <img src="./assets/imgs/Desert.jpg" alt="">
+    </ion-slide>
+    <ion-slide style="background-color: blue">
+        <img src="./assets/imgs/Penguins.jpg" alt="">
+    </ion-slide>
+    <ion-slide style="background-color: red">
+        <img src="./assets/imgs/Penguins.jpg" alt="">
+    </ion-slide>
+  </ion-slides>
+  <!--  -->
+  <ion-card>
+    <ion-card-header>
+      Flores
+    </ion-card-header>
+    <img src="./assets/imgs/Penguins.jpg" alt="">
+    <ion-card-content>
+      Las flores en primavera
+    </ion-card-content>
+    <button ion-button clear>Ver más...</button>
+  </ion-card>
+  <ion-item-group>
+    <ion-item-divider>
+        Periodo 2
+    </ion-item-divider>
+      <button ion-item>
+        <img height="30px" width="30px" src="./assets/imgs/logo.svg" alt="">
+        <h1>HTML</h1>
+      </button>
+      <button ion-item>Bootstrap</button>
+      <button ion-item>Logica de Programación</button>
+      <button ion-item>JavaScript 3</button>
+  </ion-item-group>
+  <ion-list>
+    <ion-list-header>
+        Periodo 3
+    </ion-list-header>
+      <button ion-item>HTML</button>
+      <button ion-item>Bootstrap</button>
+      <button ion-item>Logica de Programación</button>
+      <button ion-item>JavaScript 3</button>
+  </ion-list>
+  <ion-list>
+    <ion-list-header>
+      Periodo 4
+    </ion-list-header>
+      <button ion-item>JavaScript 4</button>
+      <button ion-item>TypeScript</button>
+      <button ion-item>Ionic</button>
+      <button ion-item>Angular</button>
+  </ion-list>
+  <!-- pruebas -->
+  
+    <ion-list>
+  
+      <ion-list-header>Today</ion-list-header>
+  
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="./assets/imgs/logo.svg">
+        </ion-avatar>
+        <h2>JavaScript</h2>
+        <p>Aprende a programar JavaScript!</p>
+        <ion-note item-end>23/11/2018</ion-note>
+      </ion-item>
+  
+    </ion-list>
+</ion-content>

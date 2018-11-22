@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Practicando Directivas
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let i of cursos">
+      <ion-avatar  item-start>
+        <img src="./assets/imgs/{{i.imagen}}" alt="">
+        <!-- <img src="./assets/.imgs/{{i.imagen}}" alt=""> -->
+      </ion-avatar>
+      <h2>{{i.nombre}}</h2>
+      <p>{{i.descripcion}}</p>
+      <ion-note *ngIf="i.precio>1600" item-end>{{i.precio}} Bs</ion-note>
+    </ion-item>
+  </ion-list>
+</ion-content>
