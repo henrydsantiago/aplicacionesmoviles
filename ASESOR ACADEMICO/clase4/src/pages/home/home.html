@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Iniciar Sesión
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list inset>
+    <ion-item>
+        <ion-label>Usuario</ion-label>
+      <ion-input [(ngModel)]="usuario">
+
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Clave</ion-label>
+      <ion-input [(ngModel)]="clave" type="password">
+        
+      </ion-input>
+    </ion-item>
+  </ion-list>
+  <div padding>
+    <button block ion-button (click)="iniciarSesion()">
+      Iniciar Sesión
+    </button>
+  </div>
+  
+</ion-content>
