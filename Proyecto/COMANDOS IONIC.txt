@@ -1,0 +1,11 @@
+Para crear un proyecto:
+ionic start nombredelproyecto blank --no-deps
+
+Para generar una página:
+ionic generate page nombredelapagina 
+
+Para generar un servicio:
+ionic g provider nombredelservicio
+
+OMDBAPI.COM
+Apikey= 6f58a9b8

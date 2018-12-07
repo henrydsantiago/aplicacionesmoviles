@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  Buscar peliculas
+  <ion-input type="text" [(ngModel)]="buscar"></ion-input>
+  <button block ion-button (click)="onClickBuscar()">
+    Buscar
+  </button>
+  <ion-list *ngIf="resultados.length>0">
+    <button ion-item 
+      *ngFor="let r of resultados"
+      (click)="verDetalle(r)">
+      {{r.Title}}
+    </button>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title *ngIf="resultados.length>0">
+      {{n}} resultados
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
